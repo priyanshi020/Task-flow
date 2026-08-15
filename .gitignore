@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+client/dist/
+client/.vite/
+
+# Secrets — .env.example is committed, .env is not
+.env
+.env.local
+.env.*.local
+
+# Uploaded product images (runtime data, not source)
+server/uploads/
+
+# Logs and process files
+*.log
+npm-debug.log*
+logs/
+pids/
+*.pid
+
+# Editor and OS noise
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.swp

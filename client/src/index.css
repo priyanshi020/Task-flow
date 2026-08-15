@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f4f5f7;
+  color: #172b4d;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.app-header h1 {
+  font-size: 22px;
+  margin: 0 0 16px;
+}
+
+.state-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 60vh;
+  font-size: 16px;
+  color: #44546f;
+}
+
+.state-message.error {
+  color: #b3261e;
+}
+
+.banner {
+  background: #fff2f0;
+  border: 1px solid #ffccc7;
+  color: #a8071a;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-label {
+  font-size: 13px;
+  color: #5e6c84;
+  margin-right: 4px;
+}
+
+.filter-chip {
+  border: 1px solid #dfe1e6;
+  background: white;
+  border-radius: 14px;
+  padding: 4px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #42526e;
+}
+
+.filter-chip.active {
+  background: #0052cc;
+  border-color: #0052cc;
+  color: white;
+}
+
+.search-input {
+  padding: 6px 10px;
+  border: 1px solid #dfe1e6;
+  border-radius: 6px;
+  font-size: 13px;
+  min-width: 220px;
+}
+
+.board {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  align-items: flex-start;
+}
+
+.column {
+  background: #ebecf0;
+  border-radius: 8px;
+  padding: 10px;
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px;
+}
+
+.column-header h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.column-count {
+  background: #dfe1e6;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 1px 8px;
+  color: #44546f;
+}
+
+.column-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 20px;
+}
+
+.column-empty {
+  font-size: 12px;
+  color: #7a869a;
+  padding: 6px;
+}
+
+.task-card {
+  background: white;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(9, 30, 66, 0.15);
+}
+
+.task-card-top {
+  margin-bottom: 6px;
+}
+
+.priority-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.priority-low {
+  background: #e3fcef;
+  color: #006644;
+}
+
+.priority-medium {
+  background: #fffae6;
+  color: #974f0c;
+}
+
+.priority-high {
+  background: #ffebe6;
+  color: #bf2600;
+}
+
+.task-title {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.task-description {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #5e6c84;
+  white-space: pre-wrap;
+}
+
+.task-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.move-select {
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid #dfe1e6;
+}
+
+.task-card-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #0052cc;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.btn-danger {
+  color: #bf2600;
+}
+
+.add-task-btn {
+  background: none;
+  border: none;
+  text-align: left;
+  color: #44546f;
+  font-size: 13px;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-task-btn:hover {
+  background: #dfe1e6;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 30, 66, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 360px;
+  max-width: 90vw;
+}
+
+.modal h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: #44546f;
+}
+
+.field input,
+.field textarea,
+.field select {
+  font-size: 14px;
+  padding: 7px 9px;
+  border: 1px solid #dfe1e6;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.field-error {
+  color: #bf2600;
+  font-size: 12px;
+}
+
+.form-error {
+  background: #fff2f0;
+  border: 1px solid #ffccc7;
+  color: #a8071a;
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-primary {
+  background: #0052cc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #ebecf0;
+  color: #172b4d;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+}
