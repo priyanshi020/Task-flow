@@ -118,12 +118,5 @@ in `server/tests/db.test.js`:
 - Pagination/virtualization if a column ever holds hundreds of tasks.
 - Basic frontend component tests (React Testing Library) alongside the backend test suite.
 
-## Time spent
-
-_[Fill in honestly before submitting — roughly how long you actually spent end to end.]_
-
-## Something I found interesting
-
-_[Optional — one thing you looked up or noticed while building this. For example: SQLite has
-foreign key enforcement OFF by default per connection, which is easy to miss until a delete
-doesn't cascade the way you expect.]_
+##Live Deployed URL-
+https://taskflow-client-aroa.onrender.com
