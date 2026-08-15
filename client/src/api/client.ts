@@ -1,8 +1,7 @@
 import type { Board, Task, TaskInput } from '../types';
 
-// In dev, Vite proxies /api -> http://localhost:4000 (see vite.config.ts).
-// In production you'd set this to the deployed backend's URL.
-const BASE_URL = '/api';
+
+const BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 export class ApiError extends Error {}
 
